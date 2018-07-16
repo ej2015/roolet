@@ -1,5 +1,14 @@
 require "roolet/version"
+require 'roo'
+require 'forwardable'
+require 'roolet/excelx'
 
 module Roolet
-  # Your code goes here...
+
+	extend Forwardable
+	extend self
+
+  def_delegator Roolet::Excelx, :new
+
+
 end
